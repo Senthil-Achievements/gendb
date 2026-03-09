@@ -257,6 +257,6 @@ if st.session_state.connected:
 st.sidebar.markdown("""
     <hr style='border-top: 1px solid #555;' />
     <div style='text-align: center; padding-top: 10px; color: #888; font-size: 0.9em;'>
-        Developed by <b>Team Vikings</b> 
+        Developed by <b>Lavanya</b> 
     </div>
 """, unsafe_allow_html=True)
