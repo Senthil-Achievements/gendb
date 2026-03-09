@@ -134,9 +134,13 @@ Write a valid SQL query for this question:
 
 Only return the SQL query without any explanation or formatting.
 """
-    model = genai.GenerativeModel('gemini-2.0-flash')
-    response = model.generate_content(prompt)
-    return response.text.replace("```sql", "").replace("```", "").strip()
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    try:
+        response = model.generate_content(prompt)
+        return response.text.replace("```sql", "").replace("```", "").strip()
+    except Exception as e:
+        st.error(f"Gemini API Error: {e}")
+        raise e
 
 # ─── Session State ───
 if "connected" not in st.session_state:
