@@ -134,7 +134,7 @@ Write a valid SQL query for this question:
 
 Only return the SQL query without any explanation or formatting.
 """
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     try:
         response = model.generate_content(prompt)
         return response.text.replace("```sql", "").replace("```", "").strip()
